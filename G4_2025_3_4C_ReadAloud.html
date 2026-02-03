@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>A Friend in Canada - Listening Practice</title>
+  <style>
+    body {
+      font-family: "Hiragino Maru Gothic ProN", "Hiragino Maru Gothic", "Arial", sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      line-height: 1.8;
+      font-size: 18pt;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .paragraph {
+      border: 2px solid #ccc;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 14px;
+      background: #fafafa;
+    }
+
+    .english {
+      margin-bottom: 16px;
+    }
+
+    .japanese {
+      font-size: 16pt;
+      color: #333;
+      background: #fff;
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px dashed #bbb;
+    }
+
+    button {
+      margin-top: 16px;
+      padding: 12px 22px;
+      font-size: 16pt;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>A Friend in Canada</h1>
+
+<div class="paragraph">
+  <div class="english">
+    Yuki is thirteen years old. She lives in Osaka. She has a friend in Canada.
+    Her friend’s name is Paul, and he is fourteen years old.
+  </div>
+
+  <div class="japanese">
+    ユキは13歳です。大阪に住んでいます。カナダに友だちがいます。
+    その友だちの名前はポールで、14歳です。
+  </div>
+
+  <button onclick="speakText(this.parentElement.querySelector('.english').innerText)">
+    🔊 Paragraph 1 を聞く
+  </button>
+</div>
+
+<div class="paragraph">
+  <div class="english">
+    Last winter, Yuki and her family visited Paul and his parents in Canada for twelve days.
+    On the first day, Paul showed Yuki and her family around Vancouver.
+    The next day, they all went to a mountain.
+  </div>
+
+  <div class="japanese">
+    去年の冬、ユキと家族は12日間、カナダでポールとその両親を訪ねました。
+    初日は、ポールがバンクーバーを案内しました。
+    次の日、みんなで山に行きました。
+  </div>
+
+  <button onclick="speakText(this.parentElement.querySelector('.english').innerText)">
+    🔊 Paragraph 2 を聞く
+  </button>
+</div>
+
+<div class="paragraph">
+  <div class="english">
+    One day during lunch, Paul asked Yuki, “Is summer the best season in Japan?”
+    Yuki answered, “No, I like spring because the cherry blossoms are beautiful.”
+    Paul is interested in Japanese temples, so he wants to go to Kyoto someday.
+  </div>
+
+  <div class="japanese">
+    ある日の昼ごはんのとき、ポールはユキに
+    「日本では夏がいちばんいい季節なの？」と聞きました。
+    ユキは「いいえ。春が好きです。桜がきれいだからです」と答えました。
+    ポールは日本のお寺に興味があり、いつか京都に行きたいと思っています。
+  </div>
+
+  <button onclick="speakText(this.parentElement.querySelector('.english').innerText)">
+    🔊 Paragraph 3 を聞く
+  </button>
+</div>
+
+<div class="paragraph">
+  <div class="english">
+    On the last day of the trip, Paul and Yuki looked sad.
+    When they said goodbye, Paul’s mother said, “See you in Osaka next spring.”
+    Yuki’s father said, “Yes. Please stay with us for a few days.”
+    Yuki and Paul were very happy.
+    Yuki is looking forward to seeing Paul again.
+  </div>
+
+  <div class="japanese">
+    旅行の最後の日、ポールとユキは悲しそうでした。
+    別れのとき、ポールのお母さんは
+    「来年の春に大阪で会いましょう」と言いました。
+    ユキのお父さんは
+    「はい。数日間、ぜひ泊まってください」と言いました。
+    ユキとポールはとてもハッピーでした。
+    ユキはまたポールに会うのを楽しみにしています。
+  </div>
+
+  <button onclick="speakText(this.parentElement.querySelector('.english').innerText)">
+    🔊 Paragraph 4 を聞く
+  </button>
+</div>
+
+<script>
+  function speakText(text) {
+    speechSynthesis.cancel();
+
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "en-US";
+    utterance.rate = 0.6;   // 超ゆっくり（小学生向け）
+    utterance.pitch = 1.0;
+
+    const voices = speechSynthesis.getVoices();
+    const usVoice = voices.find(v => v.lang === "en-US");
+
+    if (usVoice) {
+      utterance.voice = usVoice;
+    }
+
+    speechSynthesis.speak(utterance);
+  }
+
+  window.speechSynthesis.onvoiceschanged = () => {};
+</script>
+
+</body>
+</html>
