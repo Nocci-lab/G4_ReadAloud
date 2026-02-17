@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>It's Too Cold - Read Aloud Practice</title>
+  <style>
+    body {
+      font-family: "Hiragino Maru Gothic ProN", "Hiragino Maru Gothic", "Arial", sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      line-height: 1.8;
+      font-size: 18pt;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .sentence-box {
+      border: 2px solid #ccc;
+      padding: 20px;
+      margin-bottom: 25px;
+      border-radius: 14px;
+      background: #fafafa;
+    }
+
+    .english {
+      margin-bottom: 14px;
+    }
+
+    .japanese {
+      font-size: 16pt;
+      color: #333;
+      background: #fff;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px dashed #bbb;
+    }
+
+    button {
+      margin-top: 14px;
+      padding: 10px 20px;
+      font-size: 16pt;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>It's Too Cold</h1>
+
+<!-- 1 -->
+<div class="sentence-box">
+  <div class="english">I just got to Grandma’s house.</div>
+  <div class="japanese">今、おばあちゃんの家に着いたよ。</div>
+  <button onclick="speakText(this.parentElement.querySelector('.english').innerText)">🔊 Listen</button>
+</div>
+
+<!-- 2 -->
+<div class="sentence-box">
+  <div class="english">I couldn’t take a bus because there were too many people near the bank’s bus stop.</div>
+  <div class="japanese">銀行のバス停の近くに人が多すぎたので、バスに乗れなかったの。</div>
+  <button onclick="speakText(this.parentElement.querySelector('.english').innerText)">🔊 Listen</button>
+</div>
+
+<!-- 3 -->
+<div class="sentence-box">
+  <div class="english">So I came here on foot.</div>
+  <div class="japanese">だから歩いてここまで来たよ。</div>
+  <button onclick="speakText(this.parentElement.querySelector('.english').innerText)">🔊 Listen</button>
+</div>
+
+<!-- 4 -->
+<div class="sentence-box">
+  <div class="english">Will you come here later?</div>
+  <div class="japanese">あとでここに来てくれる？</div>
+  <button onclick="speakText(this.parentElement.querySelector('.english').innerText)">🔊 Listen</button>
+</div>
+
+<!-- 5 -->
+<div class="sentence-box">
+  <div class="english">It’s cold and snowy outside.</div>
+  <div class="japanese">外は寒くて雪が降っているよ。</div>
+  <button onclick="speakText(this.parentElement.querySelector('.english').innerText)">🔊 Listen</button>
+</div>
+
+<!-- 6 -->
+<div class="sentence-box">
+  <div class="english">I wore my sweater and coat and brought an umbrella.</div>
+  <div class="japanese">セーターとコートを着て、傘も持ってきたよ。</div>
+  <button onclick="speakText(this.parentElement.querySelector('.english').innerText)">🔊 Listen</button>
+</div>
+
+<!-- 7 -->
+<div class="sentence-box">
+  <div class="english">But I left my gloves at home.</div>
+  <div class="japanese">でも、手袋を家に忘れてしまったの。</div>
+  <button onclick="speakText(this.parentElement.querySelector('.english').innerText)">🔊 Listen</button>
+</div>
+
+<!-- 8 -->
+<div class="sentence-box">
+  <div class="english">Can you bring them?</div>
+  <div class="japanese">持ってきてくれる？</div>
+  <button onclick="speakText(this.parentElement.querySelector('.english').innerText)">🔊 Listen</button>
+</div>
+
+<!-- 9 -->
+<div class="sentence-box">
+  <div class="english">OK, I’ll take your gloves later.</div>
+  <div class="japanese">わかったわ。あとであなたの手袋を持っていくね。</div>
+  <button onclick="speakText(this.parentElement.querySelector('.english').innerText)">🔊 Listen</button>
+</div>
+
+<!-- 10 -->
+<div class="sentence-box">
+  <div class="english">I just got home by train from my office.</div>
+  <div class="japanese">ちょうど今、会社から電車で家に帰ってきたところよ。</div>
+  <button onclick="speakText(this.parentElement.querySelector('.english').innerText)">🔊 Listen</button>
+</div>
+
+<!-- 11 -->
+<div class="sentence-box">
+  <div class="english">Yes, it’s very cold outside!</div>
+  <div class="japanese">本当に外はとても寒いわね！</div>
+  <button onclick="speakText(this.parentElement.querySelector('.english').innerText)">🔊 Listen</button>
+</div>
+
+<!-- 12 -->
+<div class="sentence-box">
+  <div class="english">At five o’clock, I’ll go to the supermarket to buy some chocolate for your grandma.</div>
+  <div class="japanese">5時に、おばあちゃんのためにチョコレートを買いにスーパーへ行くわ。</div>
+  <button onclick="speakText(this.parentElement.querySelector('.english').innerText)">🔊 Listen</button>
+</div>
+
+<!-- 13 -->
+<div class="sentence-box">
+  <div class="english">After that, I’ll go to her house by taxi.</div>
+  <div class="japanese">そのあと、タクシーでおばあちゃんの家に行くね。</div>
+  <button onclick="speakText(this.parentElement.querySelector('.english').innerText)">🔊 Listen</button>
+</div>
+
+<script>
+function speakText(text) {
+  speechSynthesis.cancel();
+
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = "en-US";
+  utterance.rate = 0.7;   // ゆっくり
+  utterance.pitch = 1.0;
+
+  const voices = speechSynthesis.getVoices();
+  const usVoice = voices.find(v => v.lang === "en-US");
+
+  if (usVoice) {
+    utterance.voice = usVoice;
+  }
+
+  speechSynthesis.speak(utterance);
+}
+
+window.speechSynthesis.onvoiceschanged = () => {};
+</script>
+
+</body>
+</html>
