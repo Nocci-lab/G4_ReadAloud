@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Andrew's New Teacher - Read Aloud</title>
+
+<style>
+body{
+font-family:"Hiragino Maru Gothic ProN","Hiragino Maru Gothic","Arial",sans-serif;
+max-width:900px;
+margin:40px auto;
+font-size:18pt;
+line-height:1.8;
+}
+
+h1{
+text-align:center;
+margin-bottom:40px;
+}
+
+.sentence-box{
+border:2px solid #ccc;
+border-radius:14px;
+padding:20px;
+margin-bottom:25px;
+background:#fafafa;
+}
+
+.english{
+margin-bottom:14px;
+}
+
+.japanese{
+font-size:16pt;
+background:white;
+border:1px dashed #bbb;
+padding:12px;
+border-radius:10px;
+}
+
+button{
+margin-top:14px;
+padding:10px 20px;
+font-size:16pt;
+border-radius:10px;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Andrew's New Teacher</h1>
+
+<div class="sentence-box">
+<div class="english">Andrew started high school last year.</div>
+<div class="japanese">アンドリューは去年高校に入学しました。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">In December, he took some tests.</div>
+<div class="japanese">12月に、彼はいくつかのテストを受けました。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">He got high scores in math, English, and science.</div>
+<div class="japanese">彼は数学、英語、理科で高い点数を取りました。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">But he got a low score on his history test, so his parents were worried.</div>
+<div class="japanese">しかし歴史のテストでは低い点数だったので、両親は心配しました。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">His father said, "You must study harder."</div>
+<div class="japanese">父は「もっと勉強しなさい」と言いました。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">But Andrew didn't like studying history.</div>
+<div class="japanese">しかしアンドリューは歴史の勉強が好きではありませんでした。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">In January, a new history teacher came to Andrew's school.</div>
+<div class="japanese">1月に、新しい歴史の先生がアンドリューの学校に来ました。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">She took Andrew's class to interesting places to learn about history.</div>
+<div class="japanese">彼女は歴史を学ぶために、アンドリューのクラスを面白い場所へ連れて行きました。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">They went to a castle in April and a history museum in May.</div>
+<div class="japanese">4月にはお城へ、5月には歴史博物館へ行きました。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">In class, her students wrote reports about famous people from history.</div>
+<div class="japanese">授業では、生徒たちは歴史上の有名な人物についてレポートを書きました。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">Andrew's friend Sally wrote about an artist.</div>
+<div class="japanese">アンドリューの友達サリーは芸術家について書きました。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">His friend Bill wrote about a king.</div>
+<div class="japanese">友達のビルは王様について書きました。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">Andrew wrote about a famous scientist.</div>
+<div class="japanese">アンドリューは有名な科学者について書きました。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">Andrew told his parents about his new teacher.</div>
+<div class="japanese">アンドリューは両親に新しい先生のことを話しました。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">He said, "I want to study more about history."</div>
+<div class="japanese">彼は「もっと歴史について勉強したい」と言いました。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">Andrew's mother said, "You should go to the library."</div>
+<div class="japanese">アンドリューのお母さんは「図書館へ行ったほうがいいわ。」と言いました。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">It has many books and videos about history.</div>
+<div class="japanese">そこには歴史についての本やビデオがたくさんあります。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">Now, Andrew goes to the library every Saturday morning.</div>
+<div class="japanese">今では、アンドリューは毎週土曜日の朝に図書館へ行きます。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+
+<script>
+function speak(button){
+speechSynthesis.cancel();
+
+const text = button.parentElement.querySelector('.english').innerText;
+
+const utterance = new SpeechSynthesisUtterance(text);
+utterance.lang="en-US";
+utterance.rate=0.7;
+
+speechSynthesis.speak(utterance);
+}
+</script>
+
+</body>
+</html>
