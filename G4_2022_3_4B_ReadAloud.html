@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Eiken Reading Practice - Email</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<style>
+
+body{
+font-family:"Hiragino Maru Gothic ProN","Hiragino Maru Gothic","Arial",sans-serif;
+max-width:900px;
+margin:40px auto;
+font-size:18pt;
+line-height:1.8;
+}
+
+h1{
+text-align:center;
+margin-bottom:30px;
+}
+
+.email-box{
+border:2px solid #ccc;
+border-radius:14px;
+padding:25px;
+margin-bottom:30px;
+background:#fafafa;
+}
+
+.meta{
+font-size:16pt;
+margin-bottom:10px;
+}
+
+.sentence-box{
+border:1px solid #ddd;
+border-radius:12px;
+padding:16px;
+margin-top:14px;
+background:white;
+}
+
+.english{
+margin-bottom:10px;
+}
+
+.japanese{
+font-size:15pt;
+background:#f7f7f7;
+border:1px dashed #bbb;
+padding:10px;
+border-radius:8px;
+}
+
+button{
+margin-top:10px;
+padding:8px 16px;
+font-size:14pt;
+border-radius:10px;
+cursor:pointer;
+}
+
+.pdf-btn{
+display:block;
+margin:0 auto 30px auto;
+font-size:16pt;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Email Reading Practice</h1>
+
+<button class="pdf-btn" onclick="savePDF()">📄 PDF保存</button>
+
+<div id="content">
+
+<div class="email-box">
+
+<div class="meta">From: James Ryan</div>
+<div class="meta">To: Norma Ryan</div>
+<div class="meta">Date: January 14</div>
+<div class="meta">Subject: Cake</div>
+
+<div class="sentence-box">
+<div class="english">Dear Grandma,</div>
+<div class="japanese">おばあちゃんへ</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">How are you?</div>
+<div class="japanese">元気ですか？</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">I was happy to see you last Sunday at Aunt Jenny's house.</div>
+<div class="japanese">先週の日曜日にジェニーおばさんの家であなたに会えて嬉しかったです。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">I forgot to ask you something then.</div>
+<div class="japanese">そのときあなたに聞くのを忘れてしまったことがあります。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">It's my friend's birthday on Wednesday next week.</div>
+<div class="japanese">来週の水曜日は友達の誕生日です。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">I want to make a cake for him next Tuesday after school.</div>
+<div class="japanese">来週の火曜日、学校のあとに彼のためにケーキを作りたいです。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">He loves chocolate cake, and your cake is the best!</div>
+<div class="japanese">彼はチョコレートケーキが大好きで、あなたのケーキが一番です。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">Could you send me your recipe?</div>
+<div class="japanese">レシピを送ってもらえますか？</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">Your grandson, James</div>
+<div class="japanese">孫のジェームズより</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+</div>
+
+
+
+<div class="email-box">
+
+<div class="meta">From: Norma Ryan</div>
+<div class="meta">To: James Ryan</div>
+<div class="meta">Date: January 14</div>
+<div class="meta">Subject: No problem</div>
+
+<div class="sentence-box">
+<div class="english">Hello James,</div>
+<div class="japanese">こんにちは、ジェームズ。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">Sure.</div>
+<div class="japanese">もちろんです。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">I'll write down the chocolate cake recipe for you.</div>
+<div class="japanese">あなたのためにチョコレートケーキのレシピを書いておきます。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">I'll see your father on Friday.</div>
+<div class="japanese">金曜日にあなたのお父さんに会います。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">I'll give him the recipe then, and he can give it to you at home.</div>
+<div class="japanese">そのとき彼にレシピを渡すので、家であなたに渡してくれるでしょう。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">You should put the cake in the fridge on Tuesday night.</div>
+<div class="japanese">火曜日の夜にケーキを冷蔵庫に入れておきなさい。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">Please ask me if you have any questions.</div>
+<div class="japanese">もし質問があれば聞いてください。</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+<div class="sentence-box">
+<div class="english">Love, Grandma</div>
+<div class="japanese">愛をこめて、おばあちゃんより</div>
+<button onclick="speak(this)">🔊 Listen</button>
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function speak(button){
+
+speechSynthesis.cancel();
+
+const text = button.parentElement.querySelector('.english').innerText;
+
+const utterance = new SpeechSynthesisUtterance(text);
+utterance.lang="en-US";
+utterance.rate=0.8;
+
+speechSynthesis.speak(utterance);
+
+}
+
+
+function savePDF(){
+
+const element = document.getElementById("content");
+
+const opt = {
+
+margin:0.5,
+filename:"Email_Reading.pdf",
+image:{type:'jpeg',quality:1},
+html2canvas:{scale:2},
+jsPDF:{unit:'in',format:'letter',orientation:'portrait'}
+
+};
+
+html2pdf().set(opt).from(element).save();
+
+}
+
+</script>
+
+</body>
+</html>
